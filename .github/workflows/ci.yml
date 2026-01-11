@@ -51,7 +51,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}-${{ matrix.service.name }}
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}
           tags: |
             type=ref,event=branch
             type=ref,event=pr
@@ -79,6 +79,6 @@ jobs:
 
       - name: Output image digest
         run: |
-          echo "Image: ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}-${{ matrix.service.name }}"
+          echo "Image: ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}"
           echo "Tags: ${{ steps.meta.outputs.tags }}"
 
