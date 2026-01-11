@@ -1,8 +1,6 @@
 # 多阶段构建，支持 ARM64
 FROM golang:1.24-alpine AS builder
 
-ARG TARGETOS=linux
-ARG TARGETARCH=arm64
 
 WORKDIR /app
 
@@ -18,7 +16,7 @@ RUN go mod download || true
 COPY . .
 
 # 构建二进制文件
-RUN CGO_ENABLED=0 GOOS=${TARGETOS} GOARCH=${TARGETARCH} \
+RUN CGO_ENABLED=0 \
     go build -ldflags="-w -s" -o woodpecker-config-provider .
 
 # 最终镜像
