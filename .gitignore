@@ -1,0 +1,27 @@
+.DS_Store
+
+
+# Go build artifacts
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.work
+go.work.sum
+
+# Binaries for programs and plugins
+config-provider
+woodpecker-config-provider-multifile
+
+
+# Editor backup files
+*~
+*.tmp
+*.bak
+*.swp
+*.swo
+.vscode/
+.idea/

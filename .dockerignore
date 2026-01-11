@@ -1,0 +1,17 @@
+# Git
+.git
+.gitignore
+
+# Documentation
+README.md
+*.md
+
+# Build artifacts
+*.tar.gz
+woodpecker-config-provider
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
