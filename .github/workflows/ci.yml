@@ -20,12 +20,10 @@ env:
   BUILD_ARM64: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop' }}
 
 jobs:
-
   # 构建 Docker 镜像
   build-images:
     name: Build and Push Images
     runs-on: ubuntu-latest
-    needs: [lint, test]
     permissions:
       contents: read
       packages: write
